@@ -45,7 +45,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="8dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/toggleButton6" android:textOff="@string/beginner" android:textOn="@string/beginner"
+                android:id="@+id/tBtnBeginner" android:textOff="@string/beginner" android:textOn="@string/beginner"
                 android:textColor="@android:color/white" android:background="@drawable/swoosh_toggle"
                 android:fontFamily="@font/montserrat" android:textAllCaps="false"/>
         <ToggleButton
@@ -54,7 +54,7 @@
                 android:layout_width="150dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginStart="8dp"
-                android:layout_height="wrap_content" android:id="@+id/toggleButton7" android:textOff="@string/baller"
+                android:layout_height="wrap_content" android:id="@+id/tBtnBaller" android:textOff="@string/baller"
                 android:textOn="@string/baller" android:textColor="@android:color/white"
                 android:background="@drawable/swoosh_toggle" android:fontFamily="@font/montserrat"
                 android:textAllCaps="false"/>
