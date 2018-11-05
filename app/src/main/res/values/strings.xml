@@ -13,4 +13,10 @@
     <string name="s_mens">Mens</string>
     <string name="s_womens">Womens</string>
     <string name="s_co_ed">Co-ed</string>
+    <string name="i_am_a">I am a:</string>
+    <string name="beginner">Beginner</string>
+    <string name="baller">Baller</string>
+    <string name="finish">FINISH</string>
+    <string name="exercise_image_view">exercise image view</string>
+    <string name="looking_for_a_co_ed_beginner_league_near_you">Looking for a %s %s league near you…</string>
 </resources>

@@ -17,9 +17,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".LeagueActivity">
-
         </activity>
-        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
+
+        <meta-data
+                android:name="preloaded_fonts"
+                android:resource="@array/preloaded_fonts"/>
+
+        <activity android:name=".BaseActivity">
+        </activity>
+        <activity android:name=".SkillActivity">
+        </activity>
+        <activity android:name=".ExerciseActivity">
+        </activity>
     </application>
 
 </manifest>
