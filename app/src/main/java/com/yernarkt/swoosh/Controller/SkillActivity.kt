@@ -1,20 +1,21 @@
-package com.yernarkt.swoosh
+package com.yernarkt.swoosh.Controller
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import com.yernarkt.swoosh.R
+import com.yernarkt.swoosh.Util.EXTRA_PLAYER
+import com.yernarkt.swoosh.model.PlayerInfoData
 import kotlinx.android.synthetic.main.activity_skill.*
 
 class SkillActivity : BaseActivity() {
-    var selectedValue: String = ""
-    var selectedLeague: String? = ""
+    lateinit var player: PlayerInfoData
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
 
-        selectedLeague = intent.extras!!.getString("League")
-
+        player = intent.getParcelableExtra(EXTRA_PLAYER)
 
         finishBtnBehavior()
         toggleBtnBehavior()
@@ -22,23 +23,21 @@ class SkillActivity : BaseActivity() {
 
     private fun toggleBtnBehavior() {
         tBtnBeginner.setOnClickListener {
-            selectedValue = "beginner"
+            player.skill = "beginner"
             tBtnBaller.isChecked = false
         }
 
         tBtnBaller.setOnClickListener {
-            selectedValue = "baller"
+            player.skill = "baller"
             tBtnBeginner.isChecked = false
         }
     }
 
     private fun finishBtnBehavior() {
         btnFinish.setOnClickListener {
-            if (!selectedValue.equals("")) {
+            if (player.skill != "") {
                 val intent = Intent(this, ExerciseActivity::class.java)
-                intent.putExtra("SelectedSkill", selectedValue)
-                if (selectedLeague != null)
-                    intent.putExtra("SelectedLeague", selectedLeague)
+                intent.putExtra(EXTRA_PLAYER, player)
                 startActivity(intent)
             } else {
                 Toast.makeText(this, "Please select your skill", Toast.LENGTH_LONG).show()
